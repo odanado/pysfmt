@@ -14,7 +14,8 @@ matrix:
 install:
     - pip install coverage coveralls
     - pip install Cython
-    - pip install .
+    - python setup.py sdist
+    - pip install dist/*.tar.gz
 
 script:
     - pip install flake8 && flake8 --config=.flake8.cython

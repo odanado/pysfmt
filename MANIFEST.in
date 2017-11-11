@@ -1,0 +1,2 @@
+recursive-include pysfmt *.pyx *.pxd
+recursive-include SFMT *.h
