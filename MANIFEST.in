@@ -1,2 +1,2 @@
-global-include *.pyx
-global-include *.pxd
+recursive-include pysfmt *.pyx *.pxd
+recursive-include SFMT *.h
