@@ -9,7 +9,7 @@ ext_modules.append(Extension('pysfmt',
                              include_dirs=['SFMT']))
 setup(
     name='pysfmt',
-    version='0.0.2',
+    version='0.0.3',
     description='python wrapper of SIMD-oriented Fast Mersenne Twister',
     author='odanado',
     author_email='odan3240@gmail.com',
