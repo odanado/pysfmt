@@ -14,7 +14,7 @@ install:
 
 script:
     - pip install flake8 && flake8 --config=.flake8.cython
-    - python setup.py test
+    - coverage run --source=pysfmt setup.py test
 
 after_success:
     - coveralls
