@@ -1,5 +1,9 @@
 language: python
 
+cache:
+  - pip
+  - ccache
+
 matrix:
     include:
         - os: linux
@@ -14,6 +18,7 @@ install:
 
 script:
     - pip install flake8 && flake8 --config=.flake8.cython
+    - coverage run --source=pysfmt setup.py test
 
 after_success:
     - coveralls

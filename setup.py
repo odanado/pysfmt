@@ -15,7 +15,9 @@ setup(
     author_email='odan3240@gmail.com',
     url='https://github.com/odanado/pysfmt',
     license='MIT License',
-    packages=find_packages(),
+    packages=find_packages(exclude=['tests', 'tests.*']),
     ext_modules=cythonize(ext_modules, build_dir='build'),
     install_requires=['Cython'],
+    setup_requires=['green'],
+    test_suite='tests'
 )

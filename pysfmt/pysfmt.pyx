@@ -17,3 +17,18 @@ cdef class SFMT:
 
     def genrand_uint64(self):
         return pysfmt.sfmt_genrand_uint64(self._thisptr)
+
+    def genrand_real1(self):
+        return pysfmt.sfmt_genrand_real1(self._thisptr)
+
+    def genrand_real2(self):
+        return pysfmt.sfmt_genrand_real2(self._thisptr)
+
+    def genrand_real3(self):
+        return pysfmt.sfmt_genrand_real3(self._thisptr)
+
+    def genrand_res53(self):
+        return pysfmt.sfmt_genrand_res53(self._thisptr)
+
+    def genrand_res53_mix(self):
+        return pysfmt.sfmt_genrand_res53_mix(self._thisptr)
