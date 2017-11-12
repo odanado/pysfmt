@@ -15,6 +15,20 @@ class TestSFMT(unittest.TestCase):
                 assert_func(expected[i // 1000],
                             test_func())
 
+    def test_seed(self):
+        self.sfmt.seed(10)
+        expected = [0xAD3E55542F583769,
+                    0x6D1FB1D6E009E592,
+                    0xFF7A068B8C87EAA8,
+                    0x89001C7C32D5AF34,
+                    0x7356F0C663D0B8A1,
+                    0xB2839508AB2219B4,
+                    0x7A6F631340F76B67,
+                    0xFFBB3A5A4311D543,
+                    0x61CF9833216C8A1B,
+                    0xB9F8AA436FD54D65]
+        self._test(self.sfmt.genrand_uint64, expected, self.assertEqual)
+
     def test_genrand_uint64(self):
         expected = [5915479438841489852,
                     5084829561375217883,
