@@ -15,6 +15,9 @@ cdef class SFMT:
         if self._thisptr != NULL:
             free(self._thisptr)
 
+    def seed(self, uint32_t seed):
+        pysfmt.sfmt_init_gen_rand(self._thisptr, seed)
+
     def genrand_uint64(self):
         return pysfmt.sfmt_genrand_uint64(self._thisptr)
 
